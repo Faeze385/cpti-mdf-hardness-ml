@@ -94,7 +94,7 @@ cpti-mdf-hardness-ml/
 ## Getting started
 
 ```bash
-git clone https://github.com/<your-username>/cpti-mdf-hardness-ml.git
+git clone https://github.com/<Faeze385>/cpti-mdf-hardness-ml.git
 cd cpti-mdf-hardness-ml
 pip install -r requirements.txt
 # add your copy of the dataset as Book1.xlsx in this folder, then:
