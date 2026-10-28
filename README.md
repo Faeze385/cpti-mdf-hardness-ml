@@ -40,7 +40,7 @@ Please cite this paper if you use the data or build on this work.
 
 > **Note:** the interpretation of `ơ-flow` and `Ꜫ-acc` is inferred from how the values line up with the source paper (UTS as flow stress; 0.47 strain per forging cycle). Verify against your original data before relying on it.
 
-> **Data availability:** the source paper states that its data is available on request. Check that you have permission to redistribute `Book1.xlsx` before making it public. If you don't, remove it from the repo and keep only the column descriptions above.
+> **Data availability:** the dataset is derived from Zare & Mostafaei (2025), whose data is available from the authors on request. It is **not redistributed** in this repository. To run the notebook, place your own copy as `Book1.xlsx` in the project root with the columns listed above.
 
 ## Feature engineering
 
@@ -83,16 +83,13 @@ With only 81 measurements across 9 processing conditions, treat these numbers as
 
 ```
 cpti-mdf-hardness-ml/
-├── hardness_prediction.ipynb     # full pipeline: features, tuning, evaluation, plots
-├── Book1.xlsx                    # dataset (see data availability note)
+├── hardness_prediction.ipynb   # full pipeline: features, tuning, evaluation, plots
 ├── requirements.txt
-├── results/
-│   ├── model_performance_v2.csv
-│   ├── model_comparison_v2.png
-│   ├── actual_vs_predicted_v2.png
-│   └── feature_importance_v2.png
+├── .gitignore                  # excludes the dataset (Book1.xlsx)
 └── README.md
 ```
+
+`Book1.xlsx` (the dataset) is intentionally not included. See [Dataset](#dataset).
 
 ## Getting started
 
@@ -100,6 +97,7 @@ cpti-mdf-hardness-ml/
 git clone https://github.com/<your-username>/cpti-mdf-hardness-ml.git
 cd cpti-mdf-hardness-ml
 pip install -r requirements.txt
+# add your copy of the dataset as Book1.xlsx in this folder, then:
 jupyter notebook hardness_prediction.ipynb
 ```
 
@@ -114,7 +112,7 @@ openpyxl
 jupyter
 ```
 
-The notebook reads `Book1.xlsx` from the same folder.
+The notebook reads `Book1.xlsx` from the same folder and will fail without it.
 
 ## Notes
 
@@ -132,4 +130,5 @@ The approach draws on earlier machine-learning studies of hardness prediction:
 
 ## License
 
-Add a license of your choice (for example MIT for the code). The dataset remains subject to the terms of the original source study.
+Code license: add one of your choice (for example MIT). The dataset is not part of this repository and remains subject to the terms of the original source study.
+
